@@ -6,6 +6,7 @@ Release:	1
 License:	GPL
 Group:		Libraries
 Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/1.3/%{name}-%{version}.tar.bz2
+# Source0-md5:	9dc4d83b68e173318ddb8a872c88da70
 URL:		http://www.gnome.org/
 BuildRequires:	gtkmm-devel >= 2.0.0
 BuildRequires:	libgnome-devel >= 2.0.0
