@@ -34,7 +34,7 @@ Devel files for libgnomemm.
 Pliki nag³ówkowe dla libgnomemm.
 
 %package static
-Summary:	libgnomecanvasmm static library
+Summary:	libgnomemm static library
 Summary(pl):	Biblioteka statyczna libgnomemm
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}
