@@ -1,0 +1,10 @@
+diff -urN aaa/libgnomemm-2.0.0/libgnome/libgnomemm-2.0.pc.in libgnomemm-2.0.0/libgnome/libgnomemm-2.0.pc.in
+--- aaa/libgnomemm-2.0.0/libgnome/libgnomemm-2.0.pc.in	2002-06-29 20:46:39.000000000 +0200
++++ libgnomemm-2.0.0/libgnome/libgnomemm-2.0.pc.in	2003-10-12 22:55:09.000000000 +0200
+@@ -7,5 +7,5 @@
+ Description: C++ wrapper for libgnome
+ Requires: gtkmm-2.0 >= @GTKMM_VERSION_NEEDED@  libgnome-2.0 >= @LIBGNOME_VERSION_NEEDED@
+ Version: @VERSION@
+-Libs: -L${libdir} -lgnomemm-1.3
++Libs: -L${libdir} -lgnomemm-2.0
+ Cflags: -I${includedir}/libgnomemm-2.0 -I${libdir}/libgnomemm-2.0/include
