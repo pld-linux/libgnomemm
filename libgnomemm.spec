@@ -10,6 +10,7 @@ Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/1.3/%{name}-%{version}.t
 URL:		http://www.gnome.org/
 BuildRequires:	gtkmm-devel >= 2.0.0
 BuildRequires:	libgnome-devel >= 2.0.0
+BuildRequires:	pkgconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
