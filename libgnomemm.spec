@@ -23,6 +23,8 @@ Summary:	Devel files for libgnomemm
 Summary(pl):	Pliki nag³ówkowe dla libgnomemm
 Group:		Development/Libraries
 Requires:	%{name} = %{version}
+Requires:	gtkmm-devel >= 2.0.0
+Requires:	libgnome-devel >= 2.0.0
 
 %description devel
 Devel files for libgnomemm.
@@ -47,7 +49,7 @@ Biblioteka statyczna libgnomemm.
 
 %build
 %configure \
-	--enable-static=yes
+	--enable-static
 
 %{__make}
 
@@ -69,10 +71,10 @@ rm -rf $RPM_BUILD_ROOT
 
 %files devel
 %defattr(644,root,root,755)
-%{_includedir}/%{name}-2.0
+%attr(755,root,root) %{_libdir}/libgnomemm*.so
 %{_libdir}/libgnomemm*.la
-%{_libdir}/libgnomemm*.so
 %{_libdir}/%{name}-2.0
+%{_includedir}/%{name}-2.0
 %{_pkgconfigdir}/%{name}-2.0.pc
 
 %files static
