@@ -2,15 +2,17 @@ Summary:	C++ wrappers for libgnome
 Summary(pl):	Interfejsy C++ dla libgnome
 Name:		libgnomemm
 Version:	2.6.0
-Release:	1
+Release:	2
 License:	GPL
 Group:		Libraries
 Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/2.6/%{name}-%{version}.tar.bz2
 # Source0-md5:	684a11aa4726e4f9b148866d1662fc24
 URL:		http://www.gnome.org/
+BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gtkmm-devel >= 2.4.0
 BuildRequires:	libgnome-devel >= 2.6.0
+BuildRequires:	libtool >= 2:1.4d
 BuildRequires:	pkgconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -50,7 +52,10 @@ Biblioteka statyczna libgnomemm.
 %setup -q
 
 %build
-cp -f /usr/share/automake/config.sub scripts
+%{__libtoolize}
+%{__aclocal} -I scripts
+%{__autoconf}
+%{__automake}
 %configure \
 	--enable-static
 
