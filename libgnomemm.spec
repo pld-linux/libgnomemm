@@ -49,6 +49,7 @@ Biblioteka statyczna libgnomemm.
 %setup -q
 
 %build
+cp -f /usr/share/automake/config.sub scripts
 %configure \
 	--enable-static
 
