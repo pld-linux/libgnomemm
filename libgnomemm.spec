@@ -1,5 +1,5 @@
 Summary:	C++ wrappers for libgnome
-Summary(pl):	Interfejsy C++ dla libgnome
+Summary(pl.UTF-8):   Interfejsy C++ dla libgnome
 Name:		libgnomemm
 Version:	2.16.0
 Release:	1
@@ -20,12 +20,12 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 C++ wrappers for libgnome.
 
-%description -l pl
+%description -l pl.UTF-8
 Interfejsy C++ dla libgnome.
 
 %package devel
 Summary:	Devel files for libgnomemm
-Summary(pl):	Pliki nag≥Ûwkowe dla libgnomemm
+Summary(pl.UTF-8):   Pliki nag≈Ç√≥wkowe dla libgnomemm
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	gtkmm-devel >= 2.10.0
@@ -34,19 +34,19 @@ Requires:	libgnome-devel >= 2.15.2
 %description devel
 Devel files for libgnomemm.
 
-%description devel -l pl
-Pliki nag≥Ûwkowe dla libgnomemm.
+%description devel -l pl.UTF-8
+Pliki nag≈Ç√≥wkowe dla libgnomemm.
 
 %package static
 Summary:	libgnomemm static library
-Summary(pl):	Biblioteka statyczna libgnomemm
+Summary(pl.UTF-8):   Biblioteka statyczna libgnomemm
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 libgnomemm static library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Biblioteka statyczna libgnomemm.
 
 %prep
