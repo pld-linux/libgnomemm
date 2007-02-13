@@ -1,5 +1,5 @@
 Summary:	C++ wrappers for libgnome
-Summary(pl.UTF-8):   Interfejsy C++ dla libgnome
+Summary(pl.UTF-8):	Interfejsy C++ dla libgnome
 Name:		libgnomemm
 Version:	2.16.0
 Release:	1
@@ -25,7 +25,7 @@ Interfejsy C++ dla libgnome.
 
 %package devel
 Summary:	Devel files for libgnomemm
-Summary(pl.UTF-8):   Pliki nagłówkowe dla libgnomemm
+Summary(pl.UTF-8):	Pliki nagłówkowe dla libgnomemm
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	gtkmm-devel >= 2.10.0
@@ -39,7 +39,7 @@ Pliki nagłówkowe dla libgnomemm.
 
 %package static
 Summary:	libgnomemm static library
-Summary(pl.UTF-8):   Biblioteka statyczna libgnomemm
+Summary(pl.UTF-8):	Biblioteka statyczna libgnomemm
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
