@@ -1,20 +1,20 @@
 Summary:	C++ wrappers for libgnome
 Summary(pl.UTF-8):	Interfejsy C++ dla libgnome
 Name:		libgnomemm
-Version:	2.16.0
+Version:	2.18.0
 Release:	1
 License:	GPL
 Group:		Libraries
-Source0:	http://ftp.gnome.org/pub/gnome/sources/libgnomemm/2.16/%{name}-%{version}.tar.bz2
-# Source0-md5:	2971eea9ebe6041735375e765322c51f
+Source0:	http://ftp.gnome.org/pub/gnome/sources/libgnomemm/2.18/%{name}-%{version}.tar.bz2
+# Source0-md5:	da6d481fc4a7fb0084d0e48f5c182112
 URL:		http://www.gnome.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	gtkmm-devel >= 2.10.0
-BuildRequires:	libgnome-devel >= 2.15.2
+BuildRequires:	gtkmm-devel >= 2.10.8
+BuildRequires:	libgnome-devel >= 2.17.92
 BuildRequires:	libtool >= 2:1.4d
 BuildRequires:	pkgconfig
-Requires:	libgnome >= 2.15.2
+Requires:	libgnome >= 2.17.92
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -28,8 +28,8 @@ Summary:	Devel files for libgnomemm
 Summary(pl.UTF-8):	Pliki nagłówkowe dla libgnomemm
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Requires:	gtkmm-devel >= 2.10.0
-Requires:	libgnome-devel >= 2.15.2
+Requires:	gtkmm-devel >= 2.10.8
+Requires:	libgnome-devel >= 2.17.92
 
 %description devel
 Devel files for libgnomemm.
