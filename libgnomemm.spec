@@ -1,20 +1,20 @@
 Summary:	C++ wrappers for libgnome
 Summary(pl.UTF-8):	Interfejsy C++ dla libgnome
 Name:		libgnomemm
-Version:	2.20.0
+Version:	2.20.1
 Release:	1
 License:	LGPL v2+
 Group:		Libraries
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/libgnomemm/2.20/%{name}-%{version}.tar.bz2
-# Source0-md5:	6263d15a96c34a73964be37c4e9a261f
+# Source0-md5:	4d3c7a8f1ff90244e7352d6f435b6f98
 URL:		http://www.gnome.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gtkmm-devel >= 2.12.0
-BuildRequires:	libgnome-devel >= 2.19.1
+BuildRequires:	libgnome-devel >= 2.20.1
 BuildRequires:	libtool >= 2:1.4d
 BuildRequires:	pkgconfig
-Requires:	libgnome >= 2.19.1
+Requires:	libgnome >= 2.20.1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -29,7 +29,7 @@ Summary(pl.UTF-8):	Pliki nagłówkowe dla libgnomemm
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	gtkmm-devel >= 2.12.0
-Requires:	libgnome-devel >= 2.19.1
+Requires:	libgnome-devel >= 2.20.1
 
 %description devel
 Devel files for libgnomemm.
@@ -77,16 +77,17 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README TODO
-%attr(755,root,root) %{_libdir}/libgnomemm*.so.*.*.*
+%attr(755,root,root) %{_libdir}/libgnomemm-2.6.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libgnomemm-2.6.so.1
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/libgnomemm*.so
-%{_libdir}/libgnomemm*.la
+%attr(755,root,root) %{_libdir}/libgnomemm-2.6.so
+%{_libdir}/libgnomemm-2.6.la
 %{_libdir}/%{name}-2.6
 %{_includedir}/%{name}-2.6
 %{_pkgconfigdir}/%{name}-2.6.pc
 
 %files static
 %defattr(644,root,root,755)
-%{_libdir}/libgnomemm*.a
+%{_libdir}/libgnomemm-2.6.a
