@@ -1,12 +1,12 @@
 Summary:	C++ wrappers for libgnome
 Summary(pl.UTF-8):	Interfejsy C++ dla libgnome
 Name:		libgnomemm
-Version:	2.24.0
-Release:	2
+Version:	2.28.0
+Release:	1
 License:	LGPL v2+
 Group:		Libraries
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/libgnomemm/2.24/%{name}-%{version}.tar.bz2
-# Source0-md5:	e77dd1df8e2eb1652d28e30d7c5252a4
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/libgnomemm/2.28/%{name}-%{version}.tar.bz2
+# Source0-md5:	7c583094a12159a0bab0134df5e90853
 URL:		http://www.gnome.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
