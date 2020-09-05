@@ -1,18 +1,24 @@
+#
+# Conditional build:
+%bcond_without	static_libs	# static library
+
 Summary:	C++ wrappers for libgnome
 Summary(pl.UTF-8):	Interfejsy C++ dla libgnome
 Name:		libgnomemm
 Version:	2.30.0
-Release:	11
+Release:	12
 License:	LGPL v2+
 Group:		Libraries
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/libgnomemm/2.30/%{name}-%{version}.tar.bz2
 # Source0-md5:	860f5e835cd4674393ffdd692b0c9147
-URL:		http://www.gnome.org/
+URL:		https://www.gnome.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gtkmm-devel >= 2.12.0
 BuildRequires:	libgnome-devel >= 2.20.1
+BuildRequires:	libstdc++-devel
 BuildRequires:	libtool >= 2:1.4d
+BuildRequires:	m4
 BuildRequires:	pkgconfig
 Requires:	libgnome >= 2.20.1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -58,7 +64,7 @@ Biblioteka statyczna libgnomemm.
 %{__autoconf}
 %{__automake}
 %configure \
-	--enable-static
+	%{?with_static_libs:--enable-static}
 
 %{__make}
 
@@ -67,6 +73,9 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
+
+# obsoleted by pkg-config
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/libgnomemm-2.6.la
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -83,11 +92,12 @@ rm -rf $RPM_BUILD_ROOT
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libgnomemm-2.6.so
-%{_libdir}/libgnomemm-2.6.la
-%{_libdir}/%{name}-2.6
-%{_includedir}/%{name}-2.6
-%{_pkgconfigdir}/%{name}-2.6.pc
+%{_libdir}/libgnomemm-2.6
+%{_includedir}/libgnomemm-2.6
+%{_pkgconfigdir}/libgnomemm-2.6.pc
 
+%if %{with static_libs}
 %files static
 %defattr(644,root,root,755)
 %{_libdir}/libgnomemm-2.6.a
+%endif
